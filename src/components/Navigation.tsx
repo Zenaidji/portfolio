@@ -16,6 +16,7 @@ const Navigation = () => {
   const navLinks = [
     { label: "À propos", href: "#about" },
     { label: "Compétences", href: "#skills" },
+    { label: "CV", href: "#cv" },
     { label: "Projets", href: "#projects" },
   ];
 
@@ -23,7 +24,7 @@ const Navigation = () => {
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-background/80 backdrop-blur-lg border-b border-border' 
+          ? 'bg-background/80 backdrop-blur-lg border-b border-border shadow-soft' 
           : 'bg-transparent'
       }`}
     >
@@ -32,9 +33,9 @@ const Navigation = () => {
           {/* Logo */}
           <a href="#" className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-              <span className="text-xl font-bold gradient-text">D</span>
+              <span className="text-xl font-bold gradient-text">GZ</span>
             </div>
-            <span className="font-display font-semibold text-lg hidden sm:block">DevPortfolio</span>
+            <span className="font-display font-semibold text-lg hidden sm:block text-foreground">Ghani Zenaidji</span>
           </a>
 
           {/* Desktop navigation */}
@@ -53,8 +54,8 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <a 
-            href="mailto:contact@example.com"
-            className="hidden md:inline-flex px-5 py-2.5 rounded-xl bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
+            href="mailto:ghazedj@gmail.com"
+            className="hidden md:inline-flex px-5 py-2.5 rounded-xl bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity shadow-soft"
           >
             Me contacter
           </a>
@@ -70,7 +71,7 @@ const Navigation = () => {
 
         {/* Mobile navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+          <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-lg">
             <div className="flex flex-col gap-4">
               {navLinks.map((link, index) => (
                 <a
@@ -83,8 +84,8 @@ const Navigation = () => {
                 </a>
               ))}
               <a 
-                href="mailto:contact@example.com"
-                className="inline-flex justify-center px-5 py-2.5 rounded-xl bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors mt-2"
+                href="mailto:ghazedj@gmail.com"
+                className="inline-flex justify-center px-5 py-2.5 rounded-xl bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity mt-2"
               >
                 Me contacter
               </a>

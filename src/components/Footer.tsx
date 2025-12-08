@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -6,21 +6,20 @@ const Footer = () => {
   const socialLinks = [
     { icon: Github, href: "https://github.com", label: "GitHub" },
     { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Mail, href: "mailto:contact@example.com", label: "Email" },
+    { icon: Mail, href: "mailto:ghazedj@gmail.com", label: "Email" },
   ];
 
   return (
-    <footer className="py-12 border-t border-border">
+    <footer className="py-12 border-t border-border bg-card">
       <div className="container px-6">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Logo/Name */}
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                <span className="text-xl font-bold gradient-text">D</span>
+                <span className="text-xl font-bold gradient-text">GZ</span>
               </div>
-              <span className="font-display font-semibold text-lg">DevPortfolio</span>
+              <span className="font-display font-semibold text-lg text-foreground">Ghani Zenaidji</span>
             </div>
 
             {/* Social links */}
@@ -41,7 +40,7 @@ const Footer = () => {
 
             {/* Copyright */}
             <p className="text-sm text-muted-foreground">
-              © {currentYear} Tous droits réservés
+              © {currentYear} Ghani Zenaidji. Tous droits réservés.
             </p>
           </div>
         </div>

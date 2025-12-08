@@ -3,36 +3,28 @@ import { ExternalLink, Github } from 'lucide-react';
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Cloud Dashboard",
-      description: "Dashboard de monitoring multi-cloud avec visualisation en temps réel des métriques et alertes automatisées.",
-      tags: ["React", "TypeScript", "AWS", "Grafana"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      github: "https://github.com",
-      live: "https://example.com"
+      title: "GED Bancaire",
+      description: "Système de Gestion Électronique de Documents pour la Banque Populaire avec interface moderne et gestion des workflows.",
+      tags: ["Spring Boot", "Angular", "Bootstrap", "jQuery"],
+      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=400&fit=crop"
     },
     {
-      title: "E-Commerce Platform",
-      description: "Plateforme e-commerce haute performance avec architecture microservices et paiement sécurisé.",
-      tags: ["Next.js", "Node.js", "PostgreSQL", "Stripe"],
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      github: "https://github.com",
-      live: "https://example.com"
+      title: "Intégration de Données",
+      description: "Pipeline d'intégration de données pour le service épargne monétaire avec SSIS et DataStage.",
+      tags: ["SSIS", "DataStage", "SQL Server", "ETL"],
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
     },
     {
-      title: "DevOps Pipeline",
-      description: "Pipeline CI/CD complet avec déploiement automatisé, tests et monitoring intégré.",
-      tags: ["Docker", "Kubernetes", "GitHub Actions", "Terraform"],
-      image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=600&h=400&fit=crop",
-      github: "https://github.com",
-      live: "https://example.com"
+      title: "API Gateway Sécurisée",
+      description: "Infrastructure de déploiement avec Jenkins, Tomcat et analyse de sécurité Checkmarx.",
+      tags: ["Jenkins", "Docker", "Tomcat", "Checkmarx"],
+      image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=600&h=400&fit=crop"
     },
     {
-      title: "API Gateway",
-      description: "Gateway API avec rate limiting, authentification OAuth2 et documentation automatique.",
-      tags: ["Go", "Redis", "Kong", "OpenAPI"],
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop",
-      github: "https://github.com",
-      live: "https://example.com"
+      title: "Solution Jeu Mobile",
+      description: "Système de gestion utilisateurs pour application mobile développé en méthodologie Scrum.",
+      tags: ["C#", ".NET", "ASP.NET", "Falcon"],
+      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop"
     }
   ];
 
@@ -43,8 +35,8 @@ const ProjectsSection = () => {
           {/* Section header */}
           <div className="text-center mb-20">
             <span className="text-primary font-medium tracking-wider uppercase text-sm">Portfolio</span>
-            <h2 className="text-4xl md:text-5xl font-bold font-display mt-4">
-              Projets Récents
+            <h2 className="text-4xl md:text-5xl font-bold font-display mt-4 text-foreground">
+              Projets Réalisés
             </h2>
           </div>
 
@@ -53,7 +45,7 @@ const ProjectsSection = () => {
             {projects.map((project, index) => (
               <div 
                 key={index}
-                className="group rounded-2xl border border-border overflow-hidden card-gradient hover:border-primary/30 transition-all duration-500"
+                className="group rounded-2xl border border-border overflow-hidden bg-card shadow-soft hover:shadow-card-hover transition-all duration-500"
               >
                 {/* Project image */}
                 <div className="relative h-56 overflow-hidden">
@@ -62,32 +54,12 @@ const ProjectsSection = () => {
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
-                  
-                  {/* Project links overlay */}
-                  <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <a 
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 rounded-lg bg-background/80 backdrop-blur-sm hover:bg-primary hover:text-primary-foreground transition-colors"
-                    >
-                      <Github className="w-5 h-5" />
-                    </a>
-                    <a 
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 rounded-lg bg-background/80 backdrop-blur-sm hover:bg-primary hover:text-primary-foreground transition-colors"
-                    >
-                      <ExternalLink className="w-5 h-5" />
-                    </a>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-card/90 to-transparent" />
                 </div>
 
                 {/* Project info */}
                 <div className="p-6">
-                  <h3 className="text-2xl font-semibold font-display mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="text-2xl font-semibold font-display mb-3 group-hover:text-primary transition-colors text-foreground">
                     {project.title}
                   </h3>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
