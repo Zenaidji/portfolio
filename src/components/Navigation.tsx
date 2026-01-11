@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -9,8 +9,8 @@ const Navigation = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
@@ -18,14 +18,15 @@ const Navigation = () => {
     { label: "Compétences", href: "#skills" },
     { label: "CV", href: "#cv" },
     { label: "Projets", href: "#projects" },
+    { label: "Certifications", href: "#certifications" },
   ];
 
   return (
-    <nav 
+    <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-background/80 backdrop-blur-lg border-b border-border shadow-soft' 
-          : 'bg-transparent'
+        isScrolled
+          ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-soft"
+          : "bg-transparent"
       }`}
     >
       <div className="container px-6">
@@ -35,7 +36,9 @@ const Navigation = () => {
             <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
               <span className="text-xl font-bold gradient-text">GZ</span>
             </div>
-            <span className="font-display font-semibold text-lg hidden sm:block text-foreground">Ghani Zenaidji</span>
+            <span className="font-display font-semibold text-lg hidden sm:block text-foreground">
+              Ghani Zenaidji
+            </span>
           </a>
 
           {/* Desktop navigation */}
@@ -53,7 +56,7 @@ const Navigation = () => {
           </div>
 
           {/* CTA Button */}
-          <a 
+          <a
             href="mailto:ghazedj@gmail.com"
             className="hidden md:inline-flex px-5 py-2.5 rounded-xl bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity shadow-soft"
           >
@@ -65,7 +68,11 @@ const Navigation = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden p-2 text-foreground"
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
 
@@ -83,7 +90,7 @@ const Navigation = () => {
                   {link.label}
                 </a>
               ))}
-              <a 
+              <a
                 href="mailto:ghazedj@gmail.com"
                 className="inline-flex justify-center px-5 py-2.5 rounded-xl bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity mt-2"
               >

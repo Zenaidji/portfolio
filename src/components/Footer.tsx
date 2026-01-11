@@ -1,11 +1,15 @@
-import { Github, Linkedin, Mail, Phone } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: Github, href: "https://github.com/Zenaidji", label: "GitHub" },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/ghani-zenaidji-0447461ab/",
+      label: "LinkedIn",
+    },
     { icon: Mail, href: "mailto:ghazedj@gmail.com", label: "Email" },
   ];
 
@@ -19,7 +23,9 @@ const Footer = () => {
               <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
                 <span className="text-xl font-bold gradient-text">GZ</span>
               </div>
-              <span className="font-display font-semibold text-lg text-foreground">Ghani Zenaidji</span>
+              <span className="font-display font-semibold text-lg text-foreground">
+                Ghani Zenaidji
+              </span>
             </div>
 
             {/* Social links */}
